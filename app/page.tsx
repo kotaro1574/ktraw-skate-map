@@ -1,9 +1,15 @@
 import dynamic from "next/dynamic"
 
+import { Skeleton } from "@/components/ui/skeleton"
+
 // `window` オブジェクトに依存しているため、サーバーサイドでのレンダリングを無効にする
 const Map = dynamic(() => import("@/components/ui/map"), {
   ssr: false,
-  loading: () => <p>Loading map...</p>,
+  loading: () => (
+    <Skeleton className="flex h-[600px] items-center justify-center">
+      Loading map...
+    </Skeleton>
+  ),
 })
 
 export default function IndexPage() {
