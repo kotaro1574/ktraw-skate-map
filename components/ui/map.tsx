@@ -3,6 +3,7 @@
 import { LatLngExpression } from "leaflet"
 
 import "leaflet/dist/leaflet.css"
+
 import { MapContainer, TileLayer } from "react-leaflet"
 
 type Props = {
