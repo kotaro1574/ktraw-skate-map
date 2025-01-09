@@ -4,6 +4,8 @@ import { YouTubeEmbed } from "@next/third-parties/google"
 import { spotsData } from "@/config/spots-data"
 import { Skeleton } from "@/components/ui/skeleton"
 
+export const runtime = "edge"
+
 // `window` オブジェクトに依存しているため、サーバーサイドでのレンダリングを無効にする
 const Map = dynamic(() => import("@/components/ui/map"), {
   ssr: false,
