@@ -1,4 +1,3 @@
-import { text } from "stream/consumers"
 import dynamic from "next/dynamic"
 import { YouTubeEmbed } from "@next/third-parties/google"
 
@@ -9,7 +8,7 @@ import { Skeleton } from "@/components/ui/skeleton"
 const Map = dynamic(() => import("@/components/ui/map"), {
   ssr: false,
   loading: () => (
-    <Skeleton className="flex h-[600px] items-center justify-center">
+    <Skeleton className="flex h-[250px] items-center justify-center sm:h-[350px] md:h-[500px]">
       Loading map...
     </Skeleton>
   ),
@@ -23,8 +22,10 @@ export default function SpotPage({ params }: { params: { id: string } }) {
   }
 
   return (
-    <section className="">
-      <Map center={[49.2827, -123.1207]} zoom={13} />
+    <section>
+      <div className="h-[250px] sm:h-[350px] md:h-[500px]">
+        <Map center={[49.2827, -123.1207]} zoom={13} />
+      </div>
       <div className="container py-8">
         <h1 className="text-center text-4xl font-bold">{spot.title}</h1>
         <div className="mt-8 flex items-center justify-center">
