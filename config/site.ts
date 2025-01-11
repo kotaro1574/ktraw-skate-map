@@ -1,9 +1,8 @@
 export type SiteConfig = typeof siteConfig
 
 export const siteConfig = {
-  name: "Next.js",
-  description:
-    "Beautifully designed components built with Radix UI and Tailwind CSS.",
+  name: "ktraw Skate Map",
+  description: "",
   mainNav: [
     {
       title: "Home",
@@ -11,8 +10,9 @@ export const siteConfig = {
     },
   ],
   links: {
-    twitter: "https://twitter.com/shadcn",
-    github: "https://github.com/shadcn/ui",
+    instagram: "https://www.instagram.com/ktraw1574/",
+    tiktok: "https://www.tiktok.com/@ktraw1574",
+    youtube: "https://www.youtube.com/channel/UCmPlXPBInWF3Kf1qRGtcnSQ",
     docs: "https://ui.shadcn.com",
   },
 }
