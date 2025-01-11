@@ -31,7 +31,10 @@ export default function SpotPage({ params }: { params: { id: string } }) {
       <div className="container px-4 py-8">
         <h1 className="text-center text-4xl font-bold">{spot.name}</h1>
         {spot.youTubeIds.map((youTubeId) => (
-          <div className="mt-8 flex items-center justify-center">
+          <div
+            key={youTubeId}
+            className="mt-8 flex items-center justify-center"
+          >
             <div className="size-full max-w-[720px] overflow-hidden rounded-lg">
               <YouTubeEmbed videoid={youTubeId} />
             </div>
