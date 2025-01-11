@@ -6,16 +6,14 @@ import Link from "next/link"
 import { YouTubeEmbed } from "@next/third-parties/google"
 import { Marker, Popup } from "react-leaflet"
 
+import { Spot } from "@/config/spots-data"
+
 import MarkerIcon from "../../node_modules/leaflet/dist/images/marker-icon.png"
 import MarkerShadow from "../../node_modules/leaflet/dist/images/marker-shadow.png"
 import GoogleMapsLink from "../google-map-link"
 
 type Props = {
-  spot: {
-    id: string
-    title: string
-    center?: { lat: number; lng: number }
-  }
+  spot: Spot
 }
 
 export function MapMarker({ spot }: Props) {
@@ -41,11 +39,13 @@ export function MapMarker({ spot }: Props) {
       <Popup>
         <div className="w-64">
           <Link href={`/spots/${spot.id}`}>
-            <div>{spot.title}</div>
+            <div>{spot.name}</div>
           </Link>
+
           <div className="overflow-hidden rounded-lg">
-            <YouTubeEmbed videoid={spot.id} />
+            <YouTubeEmbed videoid={spot.youTubeIds[0]} />
           </div>
+
           <GoogleMapsLink lat={spot.center.lat} lng={spot.center.lng} />
         </div>
       </Popup>

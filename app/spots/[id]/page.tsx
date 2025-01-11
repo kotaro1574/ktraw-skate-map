@@ -17,7 +17,7 @@ const Map = dynamic(() => import("@/components/ui/map"), {
 })
 
 export default function SpotPage({ params }: { params: { id: string } }) {
-  const spot = spotsData.find((spot) => spot.id === params.id)
+  const spot = spotsData.find((spot) => String(spot.id) === params.id)
 
   if (!spot) {
     return <p>Spot not found</p>
@@ -29,12 +29,14 @@ export default function SpotPage({ params }: { params: { id: string } }) {
         <Map center={spot.center} zoom={13} spots={[spot]} />
       </div>
       <div className="container px-4 py-8">
-        <h1 className="text-center text-4xl font-bold">{spot.title}</h1>
-        <div className="mt-8 flex items-center justify-center">
-          <div className="size-full max-w-[720px] overflow-hidden rounded-lg">
-            <YouTubeEmbed videoid={params.id} />
+        <h1 className="text-center text-4xl font-bold">{spot.name}</h1>
+        {spot.youTubeIds.map((youTubeId) => (
+          <div className="mt-8 flex items-center justify-center">
+            <div className="size-full max-w-[720px] overflow-hidden rounded-lg">
+              <YouTubeEmbed videoid={youTubeId} />
+            </div>
           </div>
-        </div>
+        ))}
       </div>
     </section>
   )

@@ -32,11 +32,11 @@ export default function IndexPage() {
           {spotsData.map((spot) => (
             <Card key={spot.id} className="flex flex-col justify-between">
               <Link href={`/spots/${spot.id}`}>
-                <CardHeader>{spot.title}</CardHeader>
+                <CardHeader>{spot.name}</CardHeader>
               </Link>
               <CardContent>
                 <div className="overflow-hidden rounded-lg">
-                  <YouTubeEmbed videoid={spot.id} />
+                  <YouTubeEmbed videoid={spot.youTubeIds[0]} />
                 </div>
               </CardContent>
             </Card>
