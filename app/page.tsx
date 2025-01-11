@@ -20,7 +20,11 @@ export default function IndexPage() {
   return (
     <section>
       <div className="h-[350px] sm:h-[450px] md:h-[600px]">
-        <Map center={[49.2827, -123.1207]} zoom={13} />
+        <Map
+          center={{ lat: 49.2827, lng: -123.1207 }}
+          zoom={12}
+          spots={spotsData}
+        />
       </div>
       <div className="container py-8">
         <h1 className="mt-8 text-center text-4xl font-bold">最新の投稿</h1>

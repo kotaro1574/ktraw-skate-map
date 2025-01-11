@@ -1,17 +1,22 @@
 "use client"
 
-import { LatLngExpression } from "leaflet"
-
 import "leaflet/dist/leaflet.css"
 
 import { MapContainer, TileLayer } from "react-leaflet"
 
+import { MapMarker } from "./map-marker"
+
 type Props = {
-  center: LatLngExpression
+  center: { lat: number; lng: number }
   zoom: number
+  spots: {
+    id: string
+    title: string
+    center?: { lat: number; lng: number }
+  }[]
 }
 
-export default function Map({ center, zoom }: Props) {
+export default function Map({ center, zoom, spots }: Props) {
   return (
     <MapContainer
       style={{
@@ -22,6 +27,9 @@ export default function Map({ center, zoom }: Props) {
       key={`${center}`}
       zoom={zoom}
     >
+      {spots.map((spot) => (
+        <MapMarker spot={spot} />
+      ))}
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

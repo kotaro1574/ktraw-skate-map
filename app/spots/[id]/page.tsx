@@ -26,7 +26,7 @@ export default function SpotPage({ params }: { params: { id: string } }) {
   return (
     <section>
       <div className="h-[250px] sm:h-[350px] md:h-[500px]">
-        <Map center={[49.2827, -123.1207]} zoom={13} />
+        <Map center={spot.center} zoom={13} spots={[spot]} />
       </div>
       <div className="container py-8">
         <h1 className="text-center text-4xl font-bold">{spot.title}</h1>
