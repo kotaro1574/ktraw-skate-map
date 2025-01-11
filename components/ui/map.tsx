@@ -26,7 +26,7 @@ export default function Map({ center, zoom, spots }: Props) {
       zoom={zoom}
     >
       {spots.map((spot) => (
-        <MapMarker spot={spot} />
+        <MapMarker key={`marker-${spot.id}`} spot={spot} />
       ))}
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

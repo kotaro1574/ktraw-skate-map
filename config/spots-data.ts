@@ -10,7 +10,7 @@ export type Spot = {
 
 export const spotsData: Spot[] = [
   {
-    id: 14,
+    id: 16,
     youTubeIds: ["BSDfDOnW0UY"],
     name: "☠️☠️☠️💫💫",
     center: {
@@ -19,7 +19,7 @@ export const spotsData: Spot[] = [
     },
   },
   {
-    id: 13,
+    id: 15,
     youTubeIds: ["BcWtAuqUEn4"],
     name: "フェイキーヒール",
     center: {
@@ -28,7 +28,7 @@ export const spotsData: Spot[] = [
     },
   },
   {
-    id: 1,
+    id: 14,
     youTubeIds: ["zIu_vc283Cc"],
     name: "フェイキーポップテールスライドの巻",
     center: {
@@ -37,7 +37,7 @@ export const spotsData: Spot[] = [
     },
   },
   {
-    id: 12,
+    id: 13,
     youTubeIds: ["MQ1EZ4FwBOI"],
     name: "アートギャラリーのステアセッション",
     center: {
@@ -46,7 +46,7 @@ export const spotsData: Spot[] = [
     },
   },
   {
-    id: 11,
+    id: 12,
     youTubeIds: ["kTqonLF-W8o"],
     name: "ステアでフロントポップ",
     center: {
@@ -55,7 +55,7 @@ export const spotsData: Spot[] = [
     },
   },
   {
-    id: 10,
+    id: 11,
     youTubeIds: ["ChIwDSDh7Lk", "huBan6hc7Nk"],
     name: "The Plaza Skatepark",
     center: {
@@ -64,7 +64,7 @@ export const spotsData: Spot[] = [
     },
   },
   {
-    id: 1,
+    id: 10,
     youTubeIds: ["ycATXgYXi6Y"],
     name: "フェイキーハーフキャブヒールで物超え♪Ｏ（≧∇≦）Ｏ",
     center: {
