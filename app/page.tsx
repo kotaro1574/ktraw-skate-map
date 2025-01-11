@@ -26,17 +26,17 @@ export default function IndexPage() {
           spots={spotsData}
         />
       </div>
-      <div className="container py-8">
+      <div className="container px-4 py-8">
         <h1 className="mt-8 text-center text-4xl font-bold">最新の投稿</h1>
         <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {spotsData.map((spot) => (
             <Card key={spot.id} className="flex flex-col justify-between">
               <Link href={`/spots/${spot.id}`}>
-                <CardHeader>{spot.title}</CardHeader>
+                <CardHeader>{spot.name}</CardHeader>
               </Link>
               <CardContent>
                 <div className="overflow-hidden rounded-lg">
-                  <YouTubeEmbed videoid={spot.id} />
+                  <YouTubeEmbed videoid={spot.youTubeIds[0]} />
                 </div>
               </CardContent>
             </Card>

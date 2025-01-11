@@ -4,16 +4,14 @@ import "leaflet/dist/leaflet.css"
 
 import { MapContainer, TileLayer } from "react-leaflet"
 
+import { Spot } from "@/config/spots-data"
+
 import { MapMarker } from "./map-marker"
 
 type Props = {
   center: { lat: number; lng: number }
   zoom: number
-  spots: {
-    id: string
-    title: string
-    center?: { lat: number; lng: number }
-  }[]
+  spots: Spot[]
 }
 
 export default function Map({ center, zoom, spots }: Props) {
