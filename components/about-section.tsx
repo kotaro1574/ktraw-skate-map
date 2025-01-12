@@ -6,14 +6,17 @@ export function AboutSection() {
       <h2 className="mt-8 text-center text-4xl font-bold">
         Ktraw Skate Map について
       </h2>
-      <div className="text-md mt-4 text-justify sm:text-center sm:text-lg">
+      <div className="text-md mt-4 text-justify sm:mt-6 sm:text-lg md:text-center">
         <p>
           このサイトは、ktraw1574-sk8のYoutubeチャンネルで紹介しているスケボースポットをMap化したサイトです。
         </p>
-        <p className="mt-2">
+        <p className="mt-2 sm:mt-1">
           スケボースポットの様子は、Youtubeで紹介しているので、気になるスポットがあれば、ぜひチェックしてみてください！
         </p>
-        <p className="mt-2">
+        <p className="mt-2 sm:mt-1">
+          Youtubeのチャンネル登録、高評価、コメントもお待ちしております！
+        </p>
+        <p className="mt-2 sm:mt-1">
           スケボースポットを探す際に、少しでもお役に立てれば幸いです。
         </p>
       </div>
