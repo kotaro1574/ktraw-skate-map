@@ -28,7 +28,7 @@ export default function SpotPage({ params }: { params: { id: string } }) {
       <div className="h-[250px] sm:h-[350px] md:h-[500px]">
         <Map center={spot.center} zoom={13} spots={[spot]} />
       </div>
-      <div className="container px-4 py-8">
+      <div className="container px-4 pb-20 pt-8">
         <h1 className="text-center text-4xl font-bold">{spot.name}</h1>
         {spot.youTubeIds.map((youTubeId) => (
           <div
