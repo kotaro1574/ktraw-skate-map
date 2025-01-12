@@ -2,7 +2,7 @@ import { YouTubeEmbed } from "@next/third-parties/google"
 
 export function AboutSection() {
   return (
-    <section className="container px-4 py-8">
+    <section className="container px-4 pb-20 pt-8">
       <h2 className="mt-8 text-center text-4xl font-bold">
         Ktraw Skate Map について
       </h2>
