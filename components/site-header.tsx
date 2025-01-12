@@ -1,4 +1,7 @@
+"use client"
+
 import Link from "next/link"
+import { Link as Scroll } from "react-scroll"
 
 import { siteConfig } from "@/config/site"
 import { buttonVariants } from "@/components/ui/button"
@@ -23,7 +26,11 @@ export function SiteHeader() {
             </div>
           </Link>
           <nav>
-            <span className="text-sm font-medium">サイトについて</span>
+            <Scroll to={"about"} offset={-40} smooth>
+              <span className="cursor-pointer text-sm font-medium">
+                サイトについて
+              </span>
+            </Scroll>
           </nav>
         </div>
         <div className="sm:hidden">
