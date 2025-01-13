@@ -7,6 +7,8 @@ import { buttonVariants } from "@/components/ui/button"
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
 import { Skeleton } from "@/components/ui/skeleton"
 
+export const runtime = "edge"
+
 // `window` オブジェクトに依存しているため、サーバーサイドでのレンダリングを無効にする
 const Map = dynamic(() => import("@/components/ui/map"), {
   ssr: false,
