@@ -1,6 +1,7 @@
 export type Spot = {
   id: number
   name: string
+  area: "カナダ" | "アメリカ"
   youTubeIds: string[]
   center: {
     lat: number
@@ -13,6 +14,7 @@ export const spotsData: Spot[] = [
     id: 16,
     youTubeIds: ["BSDfDOnW0UY"],
     name: "☠️☠️☠️💫💫",
+    area: "カナダ",
     center: {
       lat: 49.27471769703346,
       lng: -123.12127986928735,
@@ -22,6 +24,7 @@ export const spotsData: Spot[] = [
     id: 15,
     youTubeIds: ["BcWtAuqUEn4"],
     name: "フェイキーヒール",
+    area: "カナダ",
     center: {
       lat: 49.255239602503885,
       lng: -123.0834869576709,
@@ -31,6 +34,7 @@ export const spotsData: Spot[] = [
     id: 14,
     youTubeIds: ["zIu_vc283Cc"],
     name: "フェイキーポップテールスライドの巻",
+    area: "カナダ",
     center: {
       lat: 49.28321376320037,
       lng: -123.12065191564677,
@@ -40,6 +44,7 @@ export const spotsData: Spot[] = [
     id: 13,
     youTubeIds: ["MQ1EZ4FwBOI"],
     name: "アートギャラリーのステアセッション",
+    area: "カナダ",
     center: {
       lat: 49.282556078526206,
       lng: -123.1205809352389,
@@ -49,6 +54,7 @@ export const spotsData: Spot[] = [
     id: 12,
     youTubeIds: ["kTqonLF-W8o"],
     name: "ステアでフロントポップ",
+    area: "カナダ",
     center: {
       lat: 49.277151062814625,
       lng: -123.10880623899718,
@@ -58,6 +64,7 @@ export const spotsData: Spot[] = [
     id: 11,
     youTubeIds: ["ChIwDSDh7Lk", "huBan6hc7Nk"],
     name: "The Plaza Skatepark",
+    area: "カナダ",
     center: {
       lat: 49.2773774432947,
       lng: -123.10241754907588,
@@ -67,6 +74,7 @@ export const spotsData: Spot[] = [
     id: 10,
     youTubeIds: ["ycATXgYXi6Y"],
     name: "フェイキーハーフキャブヒールで物超え♪Ｏ（≧∇≦）Ｏ",
+    area: "カナダ",
     center: {
       lat: 49.222852408149514,
       lng: -122.99670933493633,
@@ -76,6 +84,7 @@ export const spotsData: Spot[] = [
     id: 9,
     youTubeIds: ["M5xyvt9ZdMo"],
     name: "アートギャラリーの3段ステアでSwitch Flip",
+    area: "カナダ",
     center: {
       lat: 49.28247648065291,
       lng: -123.12146527116455,
@@ -85,6 +94,7 @@ export const spotsData: Spot[] = [
     id: 8,
     youTubeIds: ["WPjLvfu2XlU"],
     name: "スイッチフリップでバンクインしたお",
+    area: "カナダ",
     center: {
       lat: 49.243049402221374,
       lng: -122.97211881349362,
@@ -94,6 +104,7 @@ export const spotsData: Spot[] = [
     id: 7,
     youTubeIds: ["Smd8wqmzvQ0"],
     name: "ベンチ",
+    area: "カナダ",
     center: {
       lat: 49.27599156472149,
       lng: -123.1142420434829,
@@ -103,6 +114,7 @@ export const spotsData: Spot[] = [
     id: 6,
     youTubeIds: ["giOgoTIIUGU"],
     name: "シアトルのアップレッジ",
+    area: "アメリカ",
     center: {
       lat: 47.60053482931784,
       lng: -122.33308158465819,
@@ -112,6 +124,7 @@ export const spotsData: Spot[] = [
     id: 5,
     youTubeIds: ["nV7PgYprf8Y"],
     name: "リッチモンドにあるダウンレッジ",
+    area: "カナダ",
     center: {
       lat: 49.16215314886755,
       lng: -123.13866991164544,
@@ -121,6 +134,7 @@ export const spotsData: Spot[] = [
     id: 4,
     youTubeIds: ["ZdqeE1zxJGA"],
     name: "レール越え",
+    area: "カナダ",
     center: {
       lat: 49.28287917199901,
       lng: -123.11365832698728,
@@ -130,6 +144,7 @@ export const spotsData: Spot[] = [
     id: 3,
     youTubeIds: ["kiVpiV595q4"],
     name: "アートギャラリーのギャップ",
+    area: "カナダ",
     center: {
       lat: 49.28326864624883,
       lng: -123.11984246067236,
@@ -139,6 +154,7 @@ export const spotsData: Spot[] = [
     id: 2,
     youTubeIds: ["Rsfb9ih4bp0"],
     name: "物超えにも使える良き縁石",
+    area: "カナダ",
     center: {
       lat: 49.2746298682028,
       lng: -123.1144968876603,
@@ -148,6 +164,7 @@ export const spotsData: Spot[] = [
     id: 1,
     youTubeIds: ["bCREe88IU_c"],
     name: "橋の下にあったいい感じのレッジ",
+    area: "カナダ",
     center: {
       lat: 49.27342920198536,
       lng: -123.11442272698729,
