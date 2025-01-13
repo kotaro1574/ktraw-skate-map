@@ -7,6 +7,8 @@ import { buttonVariants } from "@/components/ui/button"
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
 import { Skeleton } from "@/components/ui/skeleton"
 
+export const runtime = "edge"
+
 // `window` オブジェクトに依存しているため、サーバーサイドでのレンダリングを無効にする
 const Map = dynamic(() => import("@/components/ui/map"), {
   ssr: false,
@@ -17,34 +19,46 @@ const Map = dynamic(() => import("@/components/ui/map"), {
   ),
 })
 
-export default function IndexPage() {
+export default function SpotsAreaPage({
+  params,
+}: {
+  params: { area: string }
+}) {
+  const spots = spotsData.filter((spot) => spot.area === params.area)
+
   return (
     <section>
       <div className="h-[350px] sm:h-[450px] md:h-[600px]">
         <Map
-          center={{ lat: 49.2827, lng: -123.1207 }}
+          center={{ lat: spots[0].center.lat, lng: spots[0].center.lng }}
           zoom={12}
           spots={spotsData}
         />
       </div>
       <div className="container grid grid-cols-4 gap-4 px-4 pt-8 sm:grid-cols-8">
-        <Link
-          className={buttonVariants({ variant: "outline" })}
-          href={"/canada"}
-        >
-          🇨🇦
+        <Link className={buttonVariants({ variant: "outline" })} href={"/"}>
+          🛹
         </Link>
-        <Link
-          className={buttonVariants({ variant: "outline" })}
-          href={"/america"}
-        >
-          🇺🇸
-        </Link>
+        {spots[0].area === "canada" ? (
+          <Link
+            className={buttonVariants({ variant: "outline" })}
+            href={"/america"}
+          >
+            🇺🇸
+          </Link>
+        ) : (
+          <Link
+            className={buttonVariants({ variant: "outline" })}
+            href={"/canada"}
+          >
+            🇨🇦
+          </Link>
+        )}
       </div>
       <div className="container px-4 pb-20 pt-8">
-        <h1 className="mt-8 text-center text-4xl font-bold">最新の投稿</h1>
+        <h1 className="mt-8 text-center text-4xl font-bold">{spots[0].area}</h1>
         <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {spotsData.map((spot) => (
+          {spots.map((spot) => (
             <Card key={spot.id} className="flex flex-col justify-between">
               <Link href={`/spots/${spot.id}`}>
                 <CardHeader>{spot.name}</CardHeader>
