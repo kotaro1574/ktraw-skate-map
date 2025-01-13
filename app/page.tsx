@@ -27,7 +27,7 @@ export default function IndexPage() {
           spots={spotsData}
         />
       </div>
-      <div className="container grid grid-cols-4 gap-4 px-4 py-8 sm:grid-cols-8">
+      <div className="container grid grid-cols-4 gap-4 px-4 pt-8 sm:grid-cols-8">
         <Link
           className={buttonVariants({ variant: "outline" })}
           href={"/canada"}

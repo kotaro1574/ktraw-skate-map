@@ -13,7 +13,7 @@ export const spotsData: Spot[] = [
   {
     id: 16,
     youTubeIds: ["BSDfDOnW0UY"],
-    name: "☠️☠️☠️💫💫",
+    name: "【バンクーバー】イエールタウン駅の６段ステア",
     area: "canada",
     center: {
       lat: 49.27471769703346,
@@ -23,7 +23,7 @@ export const spotsData: Spot[] = [
   {
     id: 15,
     youTubeIds: ["BcWtAuqUEn4"],
-    name: "フェイキーヒール",
+    name: "【バンクーバー】小学校のステア",
     area: "canada",
     center: {
       lat: 49.255239602503885,
@@ -33,7 +33,7 @@ export const spotsData: Spot[] = [
   {
     id: 14,
     youTubeIds: ["zIu_vc283Cc"],
-    name: "フェイキーポップテールスライドの巻",
+    name: "【バンクーバー】アートギャラリーの縁石",
     area: "canada",
     center: {
       lat: 49.28321376320037,
@@ -43,7 +43,7 @@ export const spotsData: Spot[] = [
   {
     id: 13,
     youTubeIds: ["MQ1EZ4FwBOI"],
-    name: "アートギャラリーのステアセッション",
+    name: "【バンクーバー】アートギャラリーの５段ステア",
     area: "canada",
     center: {
       lat: 49.282556078526206,
@@ -53,7 +53,7 @@ export const spotsData: Spot[] = [
   {
     id: 12,
     youTubeIds: ["kTqonLF-W8o"],
-    name: "ステアでフロントポップ",
+    name: "【バンクーバー】高層ビルの６段ステア",
     area: "canada",
     center: {
       lat: 49.277151062814625,
@@ -63,7 +63,7 @@ export const spotsData: Spot[] = [
   {
     id: 11,
     youTubeIds: ["ChIwDSDh7Lk", "huBan6hc7Nk"],
-    name: "The Plaza Skatepark",
+    name: "【バンクーバー】The Plaza Skatepark",
     area: "canada",
     center: {
       lat: 49.2773774432947,
@@ -73,7 +73,7 @@ export const spotsData: Spot[] = [
   {
     id: 10,
     youTubeIds: ["ycATXgYXi6Y"],
-    name: "フェイキーハーフキャブヒールで物超え♪Ｏ（≧∇≦）Ｏ",
+    name: "【バーナビー】ウォーターサーバーを物超え",
     area: "canada",
     center: {
       lat: 49.222852408149514,
@@ -83,7 +83,7 @@ export const spotsData: Spot[] = [
   {
     id: 9,
     youTubeIds: ["M5xyvt9ZdMo"],
-    name: "アートギャラリーの3段ステアでSwitch Flip",
+    name: "【バンクーバー】アートギャラリーの3段ステア",
     area: "canada",
     center: {
       lat: 49.28247648065291,
@@ -93,7 +93,7 @@ export const spotsData: Spot[] = [
   {
     id: 8,
     youTubeIds: ["WPjLvfu2XlU"],
-    name: "スイッチフリップでバンクインしたお",
+    name: "【バーナビー】バンクインスポット",
     area: "canada",
     center: {
       lat: 49.243049402221374,
@@ -103,7 +103,7 @@ export const spotsData: Spot[] = [
   {
     id: 7,
     youTubeIds: ["Smd8wqmzvQ0"],
-    name: "ベンチ",
+    name: "【バンクーバー】ベンチ",
     area: "canada",
     center: {
       lat: 49.27599156472149,
@@ -113,7 +113,7 @@ export const spotsData: Spot[] = [
   {
     id: 6,
     youTubeIds: ["giOgoTIIUGU"],
-    name: "シアトルのアップレッジ",
+    name: "【シアトル】シアトルのアップレッジ",
     area: "america",
     center: {
       lat: 47.60053482931784,
@@ -133,7 +133,7 @@ export const spotsData: Spot[] = [
   {
     id: 4,
     youTubeIds: ["ZdqeE1zxJGA"],
-    name: "レール越え",
+    name: "【バンクーバー】レール越え",
     area: "canada",
     center: {
       lat: 49.28287917199901,
@@ -143,7 +143,7 @@ export const spotsData: Spot[] = [
   {
     id: 3,
     youTubeIds: ["kiVpiV595q4"],
-    name: "アートギャラリーのギャップ",
+    name: "【バンクーバー】アートギャラリーのギャップ",
     area: "canada",
     center: {
       lat: 49.28326864624883,
@@ -153,7 +153,7 @@ export const spotsData: Spot[] = [
   {
     id: 2,
     youTubeIds: ["Rsfb9ih4bp0"],
-    name: "物超えにも使える良き縁石",
+    name: "【バンクーバー】物超えにも使える良き縁石",
     area: "canada",
     center: {
       lat: 49.2746298682028,
@@ -163,7 +163,7 @@ export const spotsData: Spot[] = [
   {
     id: 1,
     youTubeIds: ["bCREe88IU_c"],
-    name: "橋の下にあったいい感じのレッジ",
+    name: "【バンクーバー】橋の下にあったいい感じのレッジ",
     area: "canada",
     center: {
       lat: 49.27342920198536,
