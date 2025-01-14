@@ -39,7 +39,7 @@ export default function ContactPage() {
   }
 
   return (
-    <div className="container py-8">
+    <div className="container max-w-[500px] py-8">
       <h1 className="text-3xl font-bold">お問い合わせ</h1>
 
       <Form {...form}>
