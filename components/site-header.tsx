@@ -9,7 +9,7 @@ import { buttonVariants } from "@/components/ui/button"
 import { Icons } from "@/components/icons"
 import { ThemeToggle } from "@/components/theme-toggle"
 
-import { SpDropdownMenu } from "./sp-dropdown-menu"
+import HamburgerMenu from "./hambarger-menu"
 
 export function SiteHeader() {
   const pathname = usePathname()
@@ -44,7 +44,7 @@ export function SiteHeader() {
           )}
         </div>
         <div className="sm:hidden">
-          <SpDropdownMenu />
+          <HamburgerMenu />
         </div>
         <div className="hidden sm:block">
           <div className="flex flex-1 items-center justify-end space-x-4">
