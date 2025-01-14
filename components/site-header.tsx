@@ -31,6 +31,11 @@ export function SiteHeader() {
                 サイトについて
               </span>
             </Scroll>
+            <Link href="/contact">
+              <span className="cursor-pointer text-sm font-medium">
+                お問い合わせ
+              </span>
+            </Link>
           </nav>
         </div>
         <div className="sm:hidden">
