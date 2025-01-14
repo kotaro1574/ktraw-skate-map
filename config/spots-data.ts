@@ -11,6 +11,16 @@ export type Spot = {
 
 export const spotsData: Spot[] = [
   {
+    id: 17,
+    youTubeIds: ["T_azTXDMfaA"],
+    name: "【ポートランド】ラウンド縁石",
+    area: "america",
+    center: {
+      lat: 45.522632061208114,
+      lng: -122.67682558974211,
+    },
+  },
+  {
     id: 16,
     youTubeIds: ["BSDfDOnW0UY"],
     name: "【バンクーバー】イエールタウン駅の６段ステア",
