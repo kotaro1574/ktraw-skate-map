@@ -9,7 +9,6 @@ import { siteConfig } from "@/config/site"
 import {
   Sheet,
   SheetContent,
-  SheetDescription,
   SheetFooter,
   SheetHeader,
   SheetTitle,
