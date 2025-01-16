@@ -61,6 +61,9 @@ export function Footer() {
           </nav>
         </div>
         <div className="mt-8 text-center text-xs">
+          <Link href="/privacy-policy">プライバシーポリシー</Link>
+        </div>
+        <div className="mt-4 text-center text-xs">
           <p>© 2025 Ktraw Skate Map</p>
         </div>
       </div>

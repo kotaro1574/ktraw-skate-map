@@ -6,7 +6,7 @@ import { YouTubeEmbed } from "@next/third-parties/google"
 export function AboutSection() {
   const pathname = usePathname()
 
-  if (pathname === "/contact") {
+  if (pathname === "/contact" || pathname === "/privacy-policy") {
     return null
   }
 
