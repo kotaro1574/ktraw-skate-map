@@ -11,7 +11,27 @@ export type Spot = {
 
 export const spotsData: Spot[] = [
   {
-    id: 17,
+    id: 20,
+    youTubeIds: ["04NSlRWgkVw"],
+    name: "【ポートランド】ウォーターフロントにあるダウンレッジ",
+    area: "america",
+    center: {
+      lat: 45.522254974598134,
+      lng: -122.66953495415979,
+    },
+  },
+  {
+    id: 19,
+    youTubeIds: ["ErW61Yd0Jfw"],
+    name: "【ポートランド】上りの縁石",
+    area: "america",
+    center: {
+      lat: 45.51297117800011,
+      lng: -122.6678479303443,
+    },
+  },
+  {
+    id: 18,
     youTubeIds: ["T_azTXDMfaA"],
     name: "【ポートランド】ラウンド縁石",
     area: "america",
@@ -21,7 +41,7 @@ export const spotsData: Spot[] = [
     },
   },
   {
-    id: 16,
+    id: 17,
     youTubeIds: ["BSDfDOnW0UY"],
     name: "【バンクーバー】イエールタウン駅の６段ステア",
     area: "canada",
@@ -31,7 +51,7 @@ export const spotsData: Spot[] = [
     },
   },
   {
-    id: 15,
+    id: 16,
     youTubeIds: ["BcWtAuqUEn4"],
     name: "【バンクーバー】小学校のステア",
     area: "canada",
@@ -41,7 +61,7 @@ export const spotsData: Spot[] = [
     },
   },
   {
-    id: 14,
+    id: 15,
     youTubeIds: ["zIu_vc283Cc"],
     name: "【バンクーバー】アートギャラリーの縁石",
     area: "canada",
@@ -51,7 +71,7 @@ export const spotsData: Spot[] = [
     },
   },
   {
-    id: 13,
+    id: 14,
     youTubeIds: ["MQ1EZ4FwBOI"],
     name: "【バンクーバー】アートギャラリーの５段ステア",
     area: "canada",
@@ -61,7 +81,7 @@ export const spotsData: Spot[] = [
     },
   },
   {
-    id: 12,
+    id: 13,
     youTubeIds: ["kTqonLF-W8o"],
     name: "【バンクーバー】高層ビルの６段ステア",
     area: "canada",
@@ -71,7 +91,7 @@ export const spotsData: Spot[] = [
     },
   },
   {
-    id: 11,
+    id: 12,
     youTubeIds: ["ChIwDSDh7Lk", "huBan6hc7Nk"],
     name: "【バンクーバー】The Plaza Skatepark",
     area: "canada",
@@ -81,7 +101,7 @@ export const spotsData: Spot[] = [
     },
   },
   {
-    id: 10,
+    id: 11,
     youTubeIds: ["ycATXgYXi6Y"],
     name: "【バーナビー】ウォーターサーバーを物超え",
     area: "canada",
@@ -91,7 +111,7 @@ export const spotsData: Spot[] = [
     },
   },
   {
-    id: 9,
+    id: 10,
     youTubeIds: ["M5xyvt9ZdMo"],
     name: "【バンクーバー】アートギャラリーの3段ステア",
     area: "canada",
@@ -101,7 +121,7 @@ export const spotsData: Spot[] = [
     },
   },
   {
-    id: 8,
+    id: 9,
     youTubeIds: ["WPjLvfu2XlU"],
     name: "【バーナビー】バンクインスポット",
     area: "canada",
@@ -111,7 +131,7 @@ export const spotsData: Spot[] = [
     },
   },
   {
-    id: 7,
+    id: 8,
     youTubeIds: ["Smd8wqmzvQ0"],
     name: "【バンクーバー】ベンチ",
     area: "canada",
@@ -121,7 +141,7 @@ export const spotsData: Spot[] = [
     },
   },
   {
-    id: 6,
+    id: 7,
     youTubeIds: ["giOgoTIIUGU"],
     name: "【シアトル】シアトルのアップレッジ",
     area: "america",
@@ -131,9 +151,19 @@ export const spotsData: Spot[] = [
     },
   },
   {
+    id: 6,
+    youTubeIds: ["UKn23fYVibk"],
+    name: "【リッチモンド】Brighouse Station 裏のレッジ",
+    area: "canada",
+    center: {
+      lat: 49.16733199565234,
+      lng: -123.13433012999562,
+    },
+  },
+  {
     id: 5,
     youTubeIds: ["nV7PgYprf8Y"],
-    name: "リッチモンドにあるダウンレッジ",
+    name: "【リッチモンド】リッチモンドにあるダウンレッジ",
     area: "canada",
     center: {
       lat: 49.16215314886755,
