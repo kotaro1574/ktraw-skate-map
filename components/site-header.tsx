@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import { usePathname } from "next/navigation"
 import { Link as Scroll } from "react-scroll"
 
 import { siteConfig } from "@/config/site"
@@ -8,9 +9,11 @@ import { buttonVariants } from "@/components/ui/button"
 import { Icons } from "@/components/icons"
 import { ThemeToggle } from "@/components/theme-toggle"
 
-import { SpDropdownMenu } from "./sp-dropdown-menu"
+import HamburgerMenu from "./hambarger-menu"
 
 export function SiteHeader() {
+  const pathname = usePathname()
+
   return (
     <header className="sticky top-0 z-[1200] w-full border-b bg-background">
       <div className="container flex h-16 items-center justify-between space-x-4 px-4">
@@ -25,16 +28,23 @@ export function SiteHeader() {
               <span className="hidden sm:inline-block">🛹</span>
             </div>
           </Link>
-          <nav>
-            <Scroll to={"about"} offset={-40} smooth>
-              <span className="cursor-pointer text-sm font-medium">
-                サイトについて
-              </span>
-            </Scroll>
-          </nav>
+          {pathname !== "/contact" && (
+            <nav>
+              <Scroll to={"about"} offset={-40} smooth className="mr-4 ">
+                <span className="cursor-pointer text-sm font-medium">
+                  サイトについて
+                </span>
+              </Scroll>
+              <Link href="/contact" className="hidden sm:inline-block">
+                <span className="cursor-pointer text-sm font-medium">
+                  お問い合わせ
+                </span>
+              </Link>
+            </nav>
+          )}
         </div>
         <div className="sm:hidden">
-          <SpDropdownMenu />
+          <HamburgerMenu />
         </div>
         <div className="hidden sm:block">
           <div className="flex flex-1 items-center justify-end space-x-4">
