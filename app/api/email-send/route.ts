@@ -3,6 +3,8 @@ import { Resend } from "resend"
 
 import { EmailTemplate } from "@/components/email-template"
 
+export const runtime = "edge"
+
 const resend = new Resend(process.env.RESEND_API_KEY)
 
 const toEmail = process.env.EMAIL || ""
