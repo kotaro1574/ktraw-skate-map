@@ -3,6 +3,7 @@ import { YouTubeEmbed } from "@next/third-parties/google"
 
 import { spotsData } from "@/config/spots-data"
 import { Skeleton } from "@/components/ui/skeleton"
+import GoogleMapsLink from "@/components/google-map-link"
 
 export const runtime = "edge"
 
@@ -40,6 +41,17 @@ export default function SpotPage({ params }: { params: { id: string } }) {
             </div>
           </div>
         ))}
+        <div className="mx-auto max-w-[720px]">
+          <GoogleMapsLink lat={spot.center.lat} lng={spot.center.lng} />
+        </div>
+
+        {spot.description && (
+          <div className="mt-12 flex items-center justify-center">
+            <div className="w-full max-w-[720px] whitespace-pre-wrap">
+              <p>{spot.description}</p>
+            </div>
+          </div>
+        )}
       </div>
     </section>
   )
