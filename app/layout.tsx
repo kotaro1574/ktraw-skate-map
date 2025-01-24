@@ -41,7 +41,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
 
   return (
     <>
-      <html lang="jp" suppressHydrationWarning>
+      <html lang="ja" suppressHydrationWarning>
         <head>
           <GoogleAdsense pId={pId} />
         </head>
