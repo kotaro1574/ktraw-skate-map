@@ -41,8 +41,10 @@ export default function RootLayout({ children }: RootLayoutProps) {
 
   return (
     <>
-      <html lang="en" suppressHydrationWarning>
-        <head />
+      <html lang="jp" suppressHydrationWarning>
+        <head>
+          <GoogleAdsense pId={pId} />
+        </head>
         <body
           className={cn(
             "min-h-screen bg-background font-sans antialiased",
@@ -59,7 +61,6 @@ export default function RootLayout({ children }: RootLayoutProps) {
             <TailwindIndicator />
           </ThemeProvider>
         </body>
-        <GoogleAdsense pId={pId} />
         <GoogleAnalytics gaId={gaId} />
       </html>
     </>
