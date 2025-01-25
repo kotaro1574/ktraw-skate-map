@@ -5,6 +5,14 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { z } from "zod"
 
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb"
 import { Button } from "@/components/ui/button"
 import {
   Form,
@@ -58,7 +66,18 @@ export default function ContactPage() {
 
   return (
     <div className="container max-w-[500px] py-8">
-      <h1 className="text-3xl font-bold">お問い合わせ</h1>
+      <Breadcrumb>
+        <BreadcrumbList>
+          <BreadcrumbItem>
+            <BreadcrumbLink href="/">ホーム</BreadcrumbLink>
+          </BreadcrumbItem>
+          <BreadcrumbSeparator />
+          <BreadcrumbItem>
+            <BreadcrumbPage>お問い合わせ</BreadcrumbPage>
+          </BreadcrumbItem>
+        </BreadcrumbList>
+      </Breadcrumb>
+      <h1 className=" mt-8 text-3xl font-bold">お問い合わせ</h1>
 
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)}>
