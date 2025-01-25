@@ -1,7 +1,16 @@
 import dynamic from "next/dynamic"
 import { YouTubeEmbed } from "@next/third-parties/google"
 
+import { areasData } from "@/config/areas-data"
 import { spotsData } from "@/config/spots-data"
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb"
 import { Skeleton } from "@/components/ui/skeleton"
 import GoogleMapsLink from "@/components/google-map-link"
 
@@ -17,7 +26,17 @@ const Map = dynamic(() => import("@/components/ui/map"), {
   ),
 })
 
-export default function SpotPage({ params }: { params: { spot_id: string } }) {
+export default function SpotPage({
+  params,
+}: {
+  params: { area: string; spot_id: string }
+}) {
+  const area = areasData.find((area) => area.nameEn === params.area) || null
+
+  if (!area) {
+    return <p>Area not found</p>
+  }
+
   const spot =
     spotsData.find((spot) => String(spot.id) === params.spot_id) || null
 
@@ -31,7 +50,24 @@ export default function SpotPage({ params }: { params: { spot_id: string } }) {
         <Map center={spot.center} zoom={13} spots={[spot]} />
       </div>
       <div className="container px-4 pb-20 pt-8">
-        <h1 className="text-center text-4xl font-bold">{spot.name}</h1>
+        <Breadcrumb>
+          <BreadcrumbList>
+            <BreadcrumbItem>
+              <BreadcrumbLink href="/">ホーム</BreadcrumbLink>
+            </BreadcrumbItem>
+            <BreadcrumbSeparator />
+            <BreadcrumbItem>
+              <BreadcrumbLink href={`/${area.nameEn}`}>
+                {area.name}
+              </BreadcrumbLink>
+            </BreadcrumbItem>
+            <BreadcrumbSeparator />
+            <BreadcrumbItem>
+              <BreadcrumbPage>スポット</BreadcrumbPage>
+            </BreadcrumbItem>
+          </BreadcrumbList>
+        </Breadcrumb>
+        <h1 className="mt-8 text-center text-4xl font-bold">{spot.name}</h1>
         {spot.youTubeIds.map((youTubeId) => (
           <div
             key={youTubeId}

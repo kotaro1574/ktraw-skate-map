@@ -4,6 +4,14 @@ import { YouTubeEmbed } from "@next/third-parties/google"
 
 import { areasData } from "@/config/areas-data"
 import { spotsData } from "@/config/spots-data"
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb"
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
 import { Skeleton } from "@/components/ui/skeleton"
 
@@ -20,6 +28,7 @@ const Map = dynamic(() => import("@/components/ui/map"), {
 })
 
 export default function AreaPage({ params }: { params: { area: string } }) {
+  console.log(params.area, "🙏")
   const area = areasData.find((area) => area.nameEn === params.area) || null
   const spots = spotsData.filter((spot) => spot.areaId === area?.id)
 
@@ -37,6 +46,17 @@ export default function AreaPage({ params }: { params: { area: string } }) {
         />
       </div>
       <div className="container px-4 pb-20 pt-8">
+        <Breadcrumb>
+          <BreadcrumbList>
+            <BreadcrumbItem>
+              <BreadcrumbLink href="/">ホーム</BreadcrumbLink>
+            </BreadcrumbItem>
+            <BreadcrumbSeparator />
+            <BreadcrumbItem>
+              <BreadcrumbPage>{area.name}</BreadcrumbPage>
+            </BreadcrumbItem>
+          </BreadcrumbList>
+        </Breadcrumb>
         <h1 className="mt-8 text-center text-4xl font-bold">{area.name}</h1>
         <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {spots.map((spot) => (

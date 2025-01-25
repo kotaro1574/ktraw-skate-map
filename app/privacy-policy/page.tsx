@@ -1,7 +1,27 @@
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb"
+
 export default function PrivacyPolicyPage() {
   return (
     <section className="container px-4 py-20">
-      <h1 className="text-3xl font-bold">プライバシーポリシー</h1>
+      <Breadcrumb>
+        <BreadcrumbList>
+          <BreadcrumbItem>
+            <BreadcrumbLink href="/">ホーム</BreadcrumbLink>
+          </BreadcrumbItem>
+          <BreadcrumbSeparator />
+          <BreadcrumbItem>
+            <BreadcrumbPage>プライバシーポリシー</BreadcrumbPage>
+          </BreadcrumbItem>
+        </BreadcrumbList>
+      </Breadcrumb>
+      <h1 className="mt-8 text-3xl font-bold">プライバシーポリシー</h1>
       <p className="mt-8 text-justify">
         KtrawSkateMap（以下、「SkateMap」といいます。）は、SkateMapの提供するサービス（以下、「本サービス」といいます。）において、利用者の皆様のプライバシーを尊重し、個人情報の保護に努めます。本プライバシーポリシーは、利用者がSkateMapのサービスを利用する際に、SkateMapがどのように個人情報を収集、利用、管理し、利用者の権利を保護するかについて説明します。
       </p>
