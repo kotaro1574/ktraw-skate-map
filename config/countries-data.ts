@@ -6,10 +6,10 @@ type Country = {
 export const countriesData: Country[] = [
   {
     id: 1,
-    name: "カナダ",
+    name: "カナダ🇨🇦",
   },
   {
     id: 2,
-    name: "アメリカ",
+    name: "アメリカ🇺🇸",
   },
 ]

@@ -12,7 +12,7 @@ export function AboutSection() {
 
   return (
     <section id="about" className="container px-4 pb-20 pt-8">
-      <h2 className="mt-8 text-center text-4xl font-bold">
+      <h2 className="mt-8 text-center text-2xl font-bold sm:text-4xl">
         Ktraw Skate Map について
       </h2>
       <div className="text-md mt-4 text-justify sm:mt-6 sm:text-lg md:text-center">

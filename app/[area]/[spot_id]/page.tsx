@@ -67,7 +67,9 @@ export default function SpotPage({
             </BreadcrumbItem>
           </BreadcrumbList>
         </Breadcrumb>
-        <h1 className="mt-8 text-center text-4xl font-bold">{spot.name}</h1>
+        <h1 className="mt-8 text-center text-2xl font-bold sm:text-4xl">
+          {spot.name}
+        </h1>
         {spot.youTubeIds.map((youTubeId) => (
           <div
             key={youTubeId}

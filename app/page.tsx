@@ -41,7 +41,9 @@ export default function HomePage() {
         />
       </div>
       <div className="container px-4 pb-20 pt-8">
-        <h1 className="mt-8 text-center text-4xl font-bold">エリア</h1>
+        <h1 className="mt-8 text-center text-2xl font-bold sm:text-4xl">
+          スポットエリア🗺️
+        </h1>
         <div className="mx-auto mt-8 max-w-lg">
           <Accordion type="single" collapsible>
             {countriesData.map((country) => (
@@ -68,7 +70,9 @@ export default function HomePage() {
         </div>
       </div>
       <div className="container px-4 pb-20 pt-8">
-        <h2 className="mt-8 text-center text-4xl font-bold">最新の投稿</h2>
+        <h2 className="mt-8 text-center text-2xl font-bold sm:text-4xl">
+          最新の投稿
+        </h2>
         <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {spotsData.map((spot) => (
             <Card key={spot.id} className="flex flex-col justify-between">
