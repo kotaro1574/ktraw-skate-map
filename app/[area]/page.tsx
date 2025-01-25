@@ -28,7 +28,6 @@ const Map = dynamic(() => import("@/components/ui/map"), {
 })
 
 export default function AreaPage({ params }: { params: { area: string } }) {
-  console.log(params.area, "🙏")
   const area = areasData.find((area) => area.nameEn === params.area) || null
   const spots = spotsData.filter((spot) => spot.areaId === area?.id)
 
