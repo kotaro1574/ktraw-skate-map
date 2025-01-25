@@ -1,6 +1,7 @@
 type Area = {
   id: number
   name: string
+  nameEn: string
   countryId: number
   center: {
     lat: number
@@ -12,6 +13,7 @@ export const areasData: Area[] = [
   {
     id: 1,
     name: "バンクーバー",
+    nameEn: "vancouver",
     countryId: 1,
     center: {
       lat: 49.2827,
@@ -21,6 +23,7 @@ export const areasData: Area[] = [
   {
     id: 2,
     name: "バーナビー",
+    nameEn: "burnaby",
     countryId: 1,
     center: {
       lat: 49.2421,
@@ -30,6 +33,7 @@ export const areasData: Area[] = [
   {
     id: 3,
     name: "リッチモンド",
+    nameEn: "richmond",
     countryId: 1,
     center: {
       lat: 49.1666,
@@ -39,6 +43,7 @@ export const areasData: Area[] = [
   {
     id: 4,
     name: "ポートランド",
+    nameEn: "portland",
     countryId: 2,
     center: {
       lat: 45.5051,
@@ -48,10 +53,11 @@ export const areasData: Area[] = [
   {
     id: 5,
     name: "シアトル",
+    nameEn: "seattle",
     countryId: 2,
     center: {
-      lat: 34.0522,
-      lng: -118.2437,
+      lat: 47.6062,
+      lng: -122.3321,
     },
   },
 ]
