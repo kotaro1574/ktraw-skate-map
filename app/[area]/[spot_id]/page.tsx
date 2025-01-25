@@ -17,8 +17,9 @@ const Map = dynamic(() => import("@/components/ui/map"), {
   ),
 })
 
-export default function SpotPage({ params }: { params: { id: string } }) {
-  const spot = spotsData.find((spot) => String(spot.id) === params.id)
+export default function SpotPage({ params }: { params: { spot_id: string } }) {
+  const spot =
+    spotsData.find((spot) => String(spot.id) === params.spot_id) || null
 
   if (!spot) {
     return <p>Spot not found</p>

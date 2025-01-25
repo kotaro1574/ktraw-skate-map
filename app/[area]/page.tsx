@@ -23,21 +23,25 @@ export default function AreaPage({ params }: { params: { area: string } }) {
   const area = areasData.find((area) => area.nameEn === params.area) || null
   const spots = spotsData.filter((spot) => spot.areaId === area?.id)
 
+  if (!area) {
+    return <p>Area not found</p>
+  }
+
   return (
     <section>
       <div className="h-[350px] sm:h-[450px] md:h-[600px]">
         <Map
-          center={{ lat: area?.center.lat || 0, lng: area?.center.lng || 0 }}
+          center={{ lat: area.center.lat || 0, lng: area.center.lng || 0 }}
           zoom={12}
           spots={spotsData}
         />
       </div>
       <div className="container px-4 pb-20 pt-8">
-        <h1 className="mt-8 text-center text-4xl font-bold">{area?.name}</h1>
+        <h1 className="mt-8 text-center text-4xl font-bold">{area.name}</h1>
         <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {spots.map((spot) => (
             <Card key={spot.id} className="flex flex-col justify-between">
-              <Link href={`/spots/${spot.id}`}>
+              <Link href={`/${area.nameEn}/${spot.id}`}>
                 <CardHeader>{spot.name}</CardHeader>
               </Link>
               <CardContent>
