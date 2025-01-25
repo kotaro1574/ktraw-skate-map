@@ -1,4 +1,5 @@
 import {
+  Circle,
   LucideProps,
   Menu,
   Moon,
@@ -14,6 +15,7 @@ export const Icons = {
   moon: Moon,
   twitter: XIcon,
   menu: Menu,
+  circle: Circle,
   youtube: (props: LucideProps) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
