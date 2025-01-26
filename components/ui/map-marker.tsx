@@ -42,14 +42,18 @@ export function MapMarker({ spot }: Props) {
       <Popup>
         <div className="w-64">
           <Link href={`/${area.nameEn}/${spot.id}`}>
-            <div>{spot.name}</div>
+            <div className="text-sm font-medium sm:font-semibold">
+              {spot.name}
+            </div>
           </Link>
 
-          <div className="overflow-hidden rounded-lg">
+          <div className="mt-2 overflow-hidden rounded-lg">
             <YouTubeEmbed videoid={spot.youTubeIds[0]} />
           </div>
 
-          <GoogleMapsLink lat={spot.center.lat} lng={spot.center.lng} />
+          <div className="mt-2">
+            <GoogleMapsLink lat={spot.center.lat} lng={spot.center.lng} />
+          </div>
         </div>
       </Popup>
     </Marker>
