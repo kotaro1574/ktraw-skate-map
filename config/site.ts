@@ -1,7 +1,7 @@
 export type SiteConfig = typeof siteConfig
 
 export const siteConfig = {
-  name: "ktraw Skate Map",
+  name: "Ktraw Skate Map",
   description:
     "ktraw1574-sk8のYoutubeチャンネルで紹介しているスケボースポットをマップ化したサイトです。スケボースポットの様子は、Youtubeで紹介しているので、気になるスポットがあれば、ぜひチェックしてみてください！スケボースポットを探す際に、少しでもお役に立てれば幸いです。",
   mainNav: [
