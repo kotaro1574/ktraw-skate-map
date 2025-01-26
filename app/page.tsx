@@ -77,7 +77,11 @@ export default function HomePage() {
           {spotsData.map((spot) => (
             <Card key={spot.id} className="flex flex-col justify-between">
               <Link href={`/${getArea(spot.areaId)?.nameEn}/${spot.id}`}>
-                <CardHeader>{spot.name}</CardHeader>
+                <CardHeader>
+                  {`【${getArea(spot.areaId)?.name}】`}
+                  <br />
+                  {spot.name}
+                </CardHeader>
               </Link>
               <CardContent>
                 <div className="overflow-hidden rounded-lg">
