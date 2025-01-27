@@ -40,7 +40,7 @@ export default function AreaPage({ params }: { params: { area: string } }) {
       <div className="h-[350px] sm:h-[450px] md:h-[600px]">
         <Map
           center={{ lat: area.center.lat || 0, lng: area.center.lng || 0 }}
-          zoom={12}
+          zoom={11}
           spots={spotsData}
         />
       </div>

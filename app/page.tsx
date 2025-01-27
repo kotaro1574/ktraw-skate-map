@@ -36,7 +36,7 @@ export default function HomePage() {
       <div className="h-[350px] sm:h-[450px] md:h-[600px]">
         <Map
           center={{ lat: 49.2827, lng: -123.1207 }}
-          zoom={12}
+          zoom={11}
           spots={spotsData}
         />
       </div>

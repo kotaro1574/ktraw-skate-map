@@ -12,4 +12,8 @@ export const countriesData: Country[] = [
     id: 2,
     name: "アメリカ🇺🇸",
   },
+  {
+    id: 3,
+    name: "日本🇯🇵",
+  },
 ]
