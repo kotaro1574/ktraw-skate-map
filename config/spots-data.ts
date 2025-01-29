@@ -12,6 +12,18 @@ export type Spot = {
 
 export const spotsData: Spot[] = [
   {
+    id: 25,
+    youTubeIds: ["hEAyqLP5hoo"],
+    name: "senda park",
+    description:
+      "ここが広島のプラザ。\n大体のレッジトリックはここで覚えた、ストリート修行スポット。\n今現在もスケボーができているのは、この公園のおかげ。\nここで仲間とスケボーして過ごす時間が幸せ。\n大切にしていかなければならないスポット。",
+    areaId: 7,
+    center: {
+      lat: 34.37678341664676,
+      lng: 132.45403883795632,
+    },
+  },
+  {
     id: 24,
     youTubeIds: ["T1ZM1CaVfbc"],
     name: "リサーチパーク",

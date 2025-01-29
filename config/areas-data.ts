@@ -70,4 +70,14 @@ export const areasData: Area[] = [
       lng: 133.919,
     },
   },
+  {
+    id: 7,
+    name: "広島",
+    nameEn: "hiroshima",
+    countryId: 3,
+    center: {
+      lat: 34.3853,
+      lng: 132.4553,
+    },
+  },
 ]
