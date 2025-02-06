@@ -1,4 +1,4 @@
-type Area = {
+export type Area = {
   id: number
   name: string
   nameEn: string

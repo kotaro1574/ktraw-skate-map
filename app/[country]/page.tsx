@@ -1,8 +1,11 @@
+"use client"
+
+import { useEffect, useState } from "react"
 import dynamic from "next/dynamic"
 import Link from "next/link"
 import { YouTubeEmbed } from "@next/third-parties/google"
 
-import { areasData } from "@/config/areas-data"
+import { Area, areasData } from "@/config/areas-data"
 import { countriesData } from "@/config/countries-data"
 import { spotsData } from "@/config/spots-data"
 import {
@@ -13,20 +16,12 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb"
+import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
 import { Skeleton } from "@/components/ui/skeleton"
+import { Icons } from "@/components/icons"
 
 export const runtime = "edge"
-
-// `window` オブジェクトに依存しているため、サーバーサイドでのレンダリングを無効にする
-const Map = dynamic(() => import("@/components/ui/map"), {
-  ssr: false,
-  loading: () => (
-    <Skeleton className="flex h-[350px] items-center justify-center sm:h-[450px] md:h-[600px]">
-      Loading map...
-    </Skeleton>
-  ),
-})
 
 export default function AreaPage({ params }: { params: { country: string } }) {
   const country =
@@ -47,13 +42,26 @@ export default function AreaPage({ params }: { params: { country: string } }) {
     }
   })
 
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const [area, setArea] = useState<Area>(areas[0])
+
+  // `window` オブジェクトに依存しているため、サーバーサイドでのレンダリングを無効にする
+  const Map = dynamic(() => import("@/components/ui/map"), {
+    ssr: false,
+    loading: () => (
+      <Skeleton className="flex h-[350px] items-center justify-center sm:h-[450px] md:h-[600px]">
+        Loading map...
+      </Skeleton>
+    ),
+  })
+
   return (
     <section>
       <div className="h-[350px] sm:h-[450px] md:h-[600px]">
         <Map
           center={{
-            lat: areas[0].center.lat || 0,
-            lng: areas[0].center.lng || 0,
+            lat: area.center.lat,
+            lng: area.center.lng,
           }}
           zoom={11}
           spots={spotsData}
@@ -71,8 +79,24 @@ export default function AreaPage({ params }: { params: { country: string } }) {
             </BreadcrumbItem>
           </BreadcrumbList>
         </Breadcrumb>
+        <div className="mx-auto mt-8">
+          {areas.map((area) => (
+            <Button
+              key={`select-area-${area.name}`}
+              variant={"outline"}
+              className="mr-2 rounded-sm"
+              onClick={() => {
+                console.log(area)
+                setArea(area)
+              }}
+            >
+              <Icons.circle className="mr-1 size-3" />
+              {area.name}
+            </Button>
+          ))}
+        </div>
         {areasWithSpots.map((areaWithSpots) => (
-          <div>
+          <div key={`areaWithSpots-${areaWithSpots.name}`}>
             <h1 className="mt-8 text-center text-2xl font-bold sm:text-4xl">
               {`【${areaWithSpots.name}】`}
             </h1>
