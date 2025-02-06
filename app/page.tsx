@@ -45,28 +45,15 @@ export default function HomePage() {
           スポットエリア🗺️
         </h1>
         <div className="mx-auto mt-8 max-w-lg">
-          <Accordion type="single" collapsible>
-            {countriesData.map((country) => (
-              <AccordionItem value={country.name} key={`country-${country.id}`}>
-                <AccordionTrigger>{country.name}</AccordionTrigger>
-                <AccordionContent className="space-y-1">
-                  {areasData
-                    .filter((area) => area.countryId === country.id)
-                    .map((area) => (
-                      <div key={`area-${area.id}`}>
-                        <Link
-                          href={`/${area.nameEn}`}
-                          className={`${buttonVariants({ variant: "ghost" })} w-full !justify-normal`}
-                        >
-                          <Icons.circle className="mr-1 size-3" />
-                          {area.name}
-                        </Link>
-                      </div>
-                    ))}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
+          {countriesData.map((country) => (
+            <Link
+              href={`/${country.nameEn}`}
+              className={`${buttonVariants({ variant: "ghost" })} w-full !justify-normal border-b`}
+            >
+              <Icons.circle className="mr-1 size-3" />
+              {country.name}
+            </Link>
+          ))}
         </div>
       </div>
       <div className="container px-4 pb-20 pt-8">
