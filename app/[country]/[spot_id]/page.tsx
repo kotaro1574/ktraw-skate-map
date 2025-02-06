@@ -2,6 +2,7 @@ import dynamic from "next/dynamic"
 import { YouTubeEmbed } from "@next/third-parties/google"
 
 import { areasData } from "@/config/areas-data"
+import { countriesData } from "@/config/countries-data"
 import { spotsData } from "@/config/spots-data"
 import {
   Breadcrumb,
@@ -29,12 +30,13 @@ const Map = dynamic(() => import("@/components/ui/map"), {
 export default function SpotPage({
   params,
 }: {
-  params: { area: string; spot_id: string }
+  params: { country: string; spot_id: string }
 }) {
-  const area = areasData.find((area) => area.nameEn === params.area) || null
+  const country =
+    countriesData.find((country) => country.nameEn === params.country) || null
 
-  if (!area) {
-    return <p>Area not found</p>
+  if (!country) {
+    return <p>Country not found</p>
   }
 
   const spot =
@@ -42,6 +44,12 @@ export default function SpotPage({
 
   if (!spot) {
     return <p>Spot not found</p>
+  }
+
+  const area = areasData.find((area) => area.id === spot.areaId) || null
+
+  if (!area) {
+    return <p>Area not found</p>
   }
 
   return (
@@ -57,8 +65,8 @@ export default function SpotPage({
             </BreadcrumbItem>
             <BreadcrumbSeparator />
             <BreadcrumbItem>
-              <BreadcrumbLink href={`/${area.nameEn}`}>
-                {area.name}
+              <BreadcrumbLink href={`/${country.nameEn}`}>
+                {country.name}
               </BreadcrumbLink>
             </BreadcrumbItem>
             <BreadcrumbSeparator />

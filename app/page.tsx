@@ -27,6 +27,18 @@ const Map = dynamic(() => import("@/components/ui/map"), {
 })
 
 export default function HomePage() {
+  const getCountry = (areaId: number) => {
+    const area = areasData.find((area) => area.id === areaId)
+
+    if (!area) return null
+
+    const country = countriesData.find(
+      (country) => country.id === area.countryId
+    )
+
+    return country || null
+  }
+
   const getArea = (areaId: number) => {
     return areasData.find((area) => area.id === areaId) || null
   }
@@ -63,7 +75,7 @@ export default function HomePage() {
         <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {spotsData.map((spot) => (
             <Card key={spot.id} className="flex flex-col justify-between">
-              <Link href={`/${getArea(spot.areaId)?.nameEn}/${spot.id}`}>
+              <Link href={`/${getCountry(spot.areaId)?.nameEn}/${spot.id}`}>
                 <CardHeader>
                   {`【${getArea(spot.areaId)?.name}】`}
                   <br />
