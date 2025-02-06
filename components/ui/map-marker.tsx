@@ -7,6 +7,7 @@ import { YouTubeEmbed } from "@next/third-parties/google"
 import { Marker, Popup } from "react-leaflet"
 
 import { areasData } from "@/config/areas-data"
+import { countriesData } from "@/config/countries-data"
 import { Spot } from "@/config/spots-data"
 
 import MarkerIcon from "../../node_modules/leaflet/dist/images/marker-icon.png"
@@ -21,6 +22,13 @@ export function MapMarker({ spot }: Props) {
   const area = areasData.find((area) => area.id === spot.areaId) || null
 
   if (!area) {
+    return null
+  }
+
+  const country =
+    countriesData.find((country) => country.id === area.countryId) || null
+
+  if (!country) {
     return null
   }
 
@@ -41,7 +49,7 @@ export function MapMarker({ spot }: Props) {
     >
       <Popup>
         <div className="w-64">
-          <Link href={`/${area.nameEn}/${spot.id}`}>
+          <Link href={`/${country.nameEn}/${spot.id}`}>
             <div className="text-sm font-medium sm:font-semibold">
               {spot.name}
             </div>

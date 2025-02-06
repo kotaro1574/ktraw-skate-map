@@ -5,12 +5,6 @@ import { YouTubeEmbed } from "@next/third-parties/google"
 import { areasData } from "@/config/areas-data"
 import { countriesData } from "@/config/countries-data"
 import { spotsData } from "@/config/spots-data"
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion"
 import { buttonVariants } from "@/components/ui/button"
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
 import { Skeleton } from "@/components/ui/skeleton"
@@ -27,6 +21,18 @@ const Map = dynamic(() => import("@/components/ui/map"), {
 })
 
 export default function HomePage() {
+  const getCountry = (areaId: number) => {
+    const area = areasData.find((area) => area.id === areaId)
+
+    if (!area) return null
+
+    const country = countriesData.find(
+      (country) => country.id === area.countryId
+    )
+
+    return country || null
+  }
+
   const getArea = (areaId: number) => {
     return areasData.find((area) => area.id === areaId) || null
   }
@@ -45,28 +51,15 @@ export default function HomePage() {
           スポットエリア🗺️
         </h1>
         <div className="mx-auto mt-8 max-w-lg">
-          <Accordion type="single" collapsible>
-            {countriesData.map((country) => (
-              <AccordionItem value={country.name} key={`country-${country.id}`}>
-                <AccordionTrigger>{country.name}</AccordionTrigger>
-                <AccordionContent className="space-y-1">
-                  {areasData
-                    .filter((area) => area.countryId === country.id)
-                    .map((area) => (
-                      <div key={`area-${area.id}`}>
-                        <Link
-                          href={`/${area.nameEn}`}
-                          className={`${buttonVariants({ variant: "ghost" })} w-full !justify-normal`}
-                        >
-                          <Icons.circle className="mr-1 size-3" />
-                          {area.name}
-                        </Link>
-                      </div>
-                    ))}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
+          {countriesData.map((country) => (
+            <Link
+              href={`/${country.nameEn}`}
+              className={`${buttonVariants({ variant: "ghost" })} w-full !justify-normal border-b`}
+            >
+              <Icons.circle className="mr-1 size-3" />
+              {country.name}
+            </Link>
+          ))}
         </div>
       </div>
       <div className="container px-4 pb-20 pt-8">
@@ -76,7 +69,7 @@ export default function HomePage() {
         <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {spotsData.map((spot) => (
             <Card key={spot.id} className="flex flex-col justify-between">
-              <Link href={`/${getArea(spot.areaId)?.nameEn}/${spot.id}`}>
+              <Link href={`/${getCountry(spot.areaId)?.nameEn}/${spot.id}`}>
                 <CardHeader>
                   {`【${getArea(spot.areaId)?.name}】`}
                   <br />
