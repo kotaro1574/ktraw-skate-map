@@ -72,7 +72,7 @@ export default function AreaPage({ params }: { params: { country: string } }) {
             lat: selectedArea.center.lat,
             lng: selectedArea.center.lng,
           }}
-          zoom={11}
+          zoom={selectedArea.zoom || 11}
           spots={spotsData}
         />
       </div>
