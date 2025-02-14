@@ -80,4 +80,14 @@ export const areasData: Area[] = [
       lng: 132.4553,
     },
   },
+  {
+    id: 8,
+    name: "徳島",
+    nameEn: "tokushima",
+    countryId: 3,
+    center: {
+      lat: 34.0703,
+      lng: 134.5547,
+    },
+  },
 ]
