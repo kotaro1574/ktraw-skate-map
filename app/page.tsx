@@ -41,8 +41,8 @@ export default function HomePage() {
     <section>
       <div className="h-[350px] sm:h-[450px] md:h-[600px]">
         <Map
-          center={{ lat: 49.2827, lng: -123.1207 }}
-          zoom={11}
+          center={{ lat: 34.755653492545136, lng: 133.53109275623473 }}
+          zoom={7}
           spots={spotsData}
         />
       </div>
@@ -53,6 +53,7 @@ export default function HomePage() {
         <div className="mx-auto mt-8 max-w-lg">
           {countriesData.map((country) => (
             <Link
+              key={country.id}
               href={`/${country.nameEn}`}
               className={`${buttonVariants({ variant: "ghost" })} w-full !justify-normal border-b`}
             >
