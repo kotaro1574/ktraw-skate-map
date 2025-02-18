@@ -41,26 +41,26 @@ export const areasData: Area[] = [
       lng: -123.1336,
     },
   },
-  {
-    id: 4,
-    name: "ポートランド",
-    nameEn: "portland",
-    countryId: 2,
-    center: {
-      lat: 45.5051,
-      lng: -122.675,
-    },
-  },
-  {
-    id: 5,
-    name: "シアトル",
-    nameEn: "seattle",
-    countryId: 2,
-    center: {
-      lat: 47.6062,
-      lng: -122.3321,
-    },
-  },
+  // {
+  //   id: 4,
+  //   name: "ポートランド",
+  //   nameEn: "portland",
+  //   countryId: 2,
+  //   center: {
+  //     lat: 45.5051,
+  //     lng: -122.675,
+  //   },
+  // },
+  // {
+  //   id: 5,
+  //   name: "シアトル",
+  //   nameEn: "seattle",
+  //   countryId: 2,
+  //   center: {
+  //     lat: 47.6062,
+  //     lng: -122.3321,
+  //   },
+  // },
   {
     id: 6,
     name: "岡山",

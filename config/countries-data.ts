@@ -10,11 +10,11 @@ export const countriesData: Country[] = [
     name: "カナダ🇨🇦",
     nameEn: "canada",
   },
-  {
-    id: 2,
-    name: "アメリカ🇺🇸",
-    nameEn: "america",
-  },
+  // {
+  //   id: 2,
+  //   name: "アメリカ🇺🇸",
+  //   nameEn: "america",
+  // },
   {
     id: 3,
     name: "日本🇯🇵",

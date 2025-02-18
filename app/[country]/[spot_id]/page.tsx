@@ -1,5 +1,8 @@
+"use client"
+
 import dynamic from "next/dynamic"
 import { YouTubeEmbed } from "@next/third-parties/google"
+import DOMPurify from "dompurify"
 
 import { areasData } from "@/config/areas-data"
 import { countriesData } from "@/config/countries-data"
@@ -98,7 +101,11 @@ export default function SpotPage({
         {spot.description && (
           <div className="mt-12 flex items-center justify-center">
             <div className="w-full max-w-[720px] whitespace-pre-wrap">
-              <p>{spot.description}</p>
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: DOMPurify.sanitize(spot.description ?? ""),
+                }}
+              />
             </div>
           </div>
         )}
