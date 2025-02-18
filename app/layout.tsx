@@ -6,7 +6,6 @@ import { GoogleAnalytics } from "@next/third-parties/google"
 import { siteConfig } from "@/config/site"
 import { fontSans } from "@/lib/fonts"
 import { cn } from "@/lib/utils"
-import { AboutSection } from "@/components/about-section"
 import { Footer } from "@/components/footer"
 import GoogleAdsense from "@/components/google-adsense"
 import { SiteHeader } from "@/components/site-header"
@@ -52,7 +51,6 @@ export default function RootLayout({ children }: RootLayoutProps) {
             <div className="relative flex min-h-screen flex-col">
               <SiteHeader />
               <div className="flex-1">{children}</div>
-              <AboutSection />
               <Footer />
             </div>
             <TailwindIndicator />

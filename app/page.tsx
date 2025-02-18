@@ -8,6 +8,7 @@ import { spotsData } from "@/config/spots-data"
 import { buttonVariants } from "@/components/ui/button"
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
 import { Skeleton } from "@/components/ui/skeleton"
+import { AboutSection } from "@/components/about-section"
 import { Icons } from "@/components/icons"
 
 // `window` オブジェクトに依存しているため、サーバーサイドでのレンダリングを無効にする
@@ -86,6 +87,7 @@ export default function HomePage() {
           ))}
         </div>
       </div>
+      <AboutSection />
     </section>
   )
 }

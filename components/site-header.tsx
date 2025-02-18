@@ -28,20 +28,22 @@ export function SiteHeader() {
               <span className="hidden sm:inline-block">🛹</span>
             </div>
           </Link>
-          {pathname !== "/contact" && (
-            <nav>
+          <nav>
+            {pathname === "/" && (
               <Scroll to={"about"} offset={-40} smooth className="mr-4 ">
                 <span className="cursor-pointer text-sm font-medium">
                   サイトについて
                 </span>
               </Scroll>
+            )}
+            {pathname !== "/contact" && (
               <Link href="/contact" className="hidden sm:inline-block">
                 <span className="cursor-pointer text-sm font-medium">
                   お問い合わせ
                 </span>
               </Link>
-            </nav>
-          )}
+            )}
+          </nav>
         </div>
         <div className="sm:hidden">
           <HamburgerMenu />
