@@ -21,26 +21,26 @@ export const areasData: Area[] = [
       lng: -123.1207,
     },
   },
-  {
-    id: 2,
-    name: "バーナビー",
-    nameEn: "burnaby",
-    countryId: 1,
-    center: {
-      lat: 49.2487,
-      lng: -122.9787,
-    },
-  },
-  {
-    id: 3,
-    name: "リッチモンド",
-    nameEn: "richmond",
-    countryId: 1,
-    center: {
-      lat: 49.1666,
-      lng: -123.1336,
-    },
-  },
+  // {
+  //   id: 2,
+  //   name: "バーナビー",
+  //   nameEn: "burnaby",
+  //   countryId: 1,
+  //   center: {
+  //     lat: 49.2487,
+  //     lng: -122.9787,
+  //   },
+  // },
+  // {
+  //   id: 3,
+  //   name: "リッチモンド",
+  //   nameEn: "richmond",
+  //   countryId: 1,
+  //   center: {
+  //     lat: 49.1666,
+  //     lng: -123.1336,
+  //   },
+  // },
   // {
   //   id: 4,
   //   name: "ポートランド",
