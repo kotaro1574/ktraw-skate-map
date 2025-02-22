@@ -3,7 +3,7 @@ export type Area = {
   name: string
   nameEn: string
   countryId: number
-  zoom?: number
+  zoom: number
   center: {
     lat: number
     lng: number
@@ -15,6 +15,7 @@ export const areasData: Area[] = [
     id: 1,
     name: "バンクーバー",
     nameEn: "vancouver",
+    zoom: 11,
     countryId: 1,
     center: {
       lat: 49.2827,
@@ -77,6 +78,7 @@ export const areasData: Area[] = [
     name: "広島",
     nameEn: "hiroshima",
     countryId: 3,
+    zoom: 11,
     center: {
       lat: 34.3853,
       lng: 132.4553,

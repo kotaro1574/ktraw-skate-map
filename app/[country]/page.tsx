@@ -33,7 +33,7 @@ export default function AreaPage({ params }: { params: { country: string } }) {
 
   const areas = areasData.filter((area) => area.countryId === country.id)
   // eslint-disable-next-line react-hooks/rules-of-hooks
-  const [selectedArea, setSelectedArea] = useState<Area>(areas[0])
+  const [selectedArea, setSelectedArea] = useState<Area | null>(null)
 
   // areasWithSpots を useMemo で作成し、selectedArea に応じて並び替える
   // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -49,8 +49,8 @@ export default function AreaPage({ params }: { params: { country: string } }) {
 
     // selectedArea に基づいて並び替え
     return areasList.sort((a, b) => {
-      if (a.id === selectedArea.id) return -1
-      if (b.id === selectedArea.id) return 1
+      if (a.id === selectedArea?.id) return -1
+      if (b.id === selectedArea?.id) return 1
       return 0
     })
   }, [areas, selectedArea])
@@ -69,10 +69,10 @@ export default function AreaPage({ params }: { params: { country: string } }) {
       <div className="h-[350px] sm:h-[450px] md:h-[600px]">
         <Map
           center={{
-            lat: selectedArea.center.lat,
-            lng: selectedArea.center.lng,
+            lat: selectedArea ? selectedArea.center.lat : country.center.lat,
+            lng: selectedArea ? selectedArea.center.lng : country.center.lng,
           }}
-          zoom={selectedArea.zoom || 11}
+          zoom={selectedArea ? selectedArea.zoom : country.zoom}
           spots={spotsData}
         />
       </div>
