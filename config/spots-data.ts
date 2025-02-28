@@ -1,5 +1,6 @@
 export type Spot = {
   id: number
+  image?: string
   youTubeIds: string[]
   name: string
   description?: string
@@ -13,6 +14,7 @@ export type Spot = {
 export const spotsData: Spot[] = [
   {
     id: 28,
+    image: "/spot/28.jpg",
     youTubeIds: ["zRMRRdTnoUg"],
     name: "Mutsumi Stadium",
     description: `
@@ -36,6 +38,7 @@ export const spotsData: Spot[] = [
   },
   {
     id: 27,
+    image: "/spot/27.jpg",
     youTubeIds: ["mDZ7KDgybLM"],
     name: "Muyagawa Shinsui Park",
     description: `
@@ -60,6 +63,7 @@ export const spotsData: Spot[] = [
   },
   {
     id: 26,
+    image: "/spot/26.jpg",
     youTubeIds: ["UUzrYXnFCME"],
     name: "ダウンヒルレッジ",
     description: `
@@ -82,6 +86,7 @@ export const spotsData: Spot[] = [
   },
   {
     id: 25,
+    image: "/spot/25.jpg",
     youTubeIds: ["hEAyqLP5hoo"],
     name: "senda park",
     description: `
@@ -104,6 +109,7 @@ export const spotsData: Spot[] = [
   },
   {
     id: 24,
+    image: "/spot/24.jpg",
     youTubeIds: ["T1ZM1CaVfbc"],
     name: "リサーチパーク",
     description: `
@@ -128,6 +134,7 @@ export const spotsData: Spot[] = [
   },
   {
     id: 23,
+    image: "/spot/23.jpg",
     youTubeIds: ["OCan4JrBP-Q"],
     name: "極上２段レッジ",
     description: `
@@ -210,6 +217,7 @@ export const spotsData: Spot[] = [
   // },
   {
     id: 17,
+    image: "/spot/17.jpg",
     youTubeIds: ["BSDfDOnW0UY"],
     name: "イエールタウン駅の６段ステア",
     description: `
@@ -306,6 +314,7 @@ export const spotsData: Spot[] = [
   // },
   {
     id: 10,
+    image: "/spot/10.jpg",
     youTubeIds: ["M5xyvt9ZdMo"],
     name: "アートギャラリーの3段ステア",
     description: `
