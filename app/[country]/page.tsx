@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react"
 import dynamic from "next/dynamic"
+import Image from "next/image"
 import Link from "next/link"
 import { YouTubeEmbed } from "@next/third-parties/google"
 
@@ -117,12 +118,17 @@ export default function AreaPage({ params }: { params: { country: string } }) {
                       <br />
                       {spot.name}
                     </CardHeader>
+                    <CardContent>
+                      <div className="overflow-hidden rounded-lg">
+                        <Image
+                          src={spot.image || ""}
+                          alt={spot.name}
+                          width={400}
+                          height={200}
+                        />
+                      </div>
+                    </CardContent>
                   </Link>
-                  <CardContent>
-                    <div className="overflow-hidden rounded-lg">
-                      <YouTubeEmbed videoid={spot.youTubeIds[0]} />
-                    </div>
-                  </CardContent>
                 </Card>
               ))}
             </div>

@@ -1,6 +1,7 @@
 "use client"
 
 import dynamic from "next/dynamic"
+import Image from "next/image"
 import { YouTubeEmbed } from "@next/third-parties/google"
 import DOMPurify from "dompurify"
 
@@ -84,16 +85,16 @@ export default function SpotPage({
         <h2 className="mt-4 text-2xl font-bold sm:text-center sm:text-4xl">
           {spot.name}
         </h2>
-        {spot.youTubeIds.map((youTubeId) => (
-          <div
-            key={youTubeId}
-            className="mt-8 flex items-center justify-center"
-          >
-            <div className="size-full max-w-[720px] overflow-hidden rounded-lg">
-              <YouTubeEmbed videoid={youTubeId} />
-            </div>
-          </div>
-        ))}
+
+        <div className="mt-8 flex items-center justify-center">
+          <Image
+            src={spot.image || ""}
+            alt={spot.name}
+            width={720}
+            height={405}
+          />
+        </div>
+
         <div className="mx-auto max-w-[720px]">
           <GoogleMapsLink lat={spot.center.lat} lng={spot.center.lng} />
         </div>
@@ -106,9 +107,23 @@ export default function SpotPage({
                   __html: DOMPurify.sanitize(spot.description ?? ""),
                 }}
               />
+              <p>
+                スポットの映像をYoutubeにアップロードしているので参考にしてみてください。
+              </p>
             </div>
           </div>
         )}
+
+        {spot.youTubeIds.map((youTubeId) => (
+          <div
+            key={youTubeId}
+            className="mt-8 flex items-center justify-center"
+          >
+            <div className="size-full max-w-[720px] overflow-hidden rounded-lg">
+              <YouTubeEmbed videoid={youTubeId} />
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   )

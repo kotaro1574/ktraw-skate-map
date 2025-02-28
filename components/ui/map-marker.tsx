@@ -2,6 +2,7 @@ import { Icon } from "leaflet"
 
 import "leaflet/dist/leaflet.css"
 
+import Image from "next/image"
 import Link from "next/link"
 import { YouTubeEmbed } from "@next/third-parties/google"
 import { Marker, Popup } from "react-leaflet"
@@ -56,7 +57,12 @@ export function MapMarker({ spot }: Props) {
           </Link>
 
           <div className="mt-2 overflow-hidden rounded-lg">
-            <YouTubeEmbed videoid={spot.youTubeIds[0]} />
+            <Image
+              src={spot.image || ""}
+              alt={spot.name}
+              width={300}
+              height={200}
+            />
           </div>
 
           <div className="mt-2">
