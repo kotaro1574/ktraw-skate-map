@@ -9,6 +9,7 @@ import { YouTubeEmbed } from "@next/third-parties/google"
 import { Area, areasData } from "@/config/areas-data"
 import { countriesData } from "@/config/countries-data"
 import { spotsData } from "@/config/spots-data"
+import { placeholder } from "@/lib/utils"
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -125,6 +126,7 @@ export default function AreaPage({ params }: { params: { country: string } }) {
                           alt={spot.name}
                           width={400}
                           height={200}
+                          placeholder={placeholder({ w: 400, h: 200 })}
                         />
                       </div>
                     </CardContent>

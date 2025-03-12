@@ -6,6 +6,7 @@ import { YouTubeEmbed } from "@next/third-parties/google"
 import { areasData } from "@/config/areas-data"
 import { countriesData } from "@/config/countries-data"
 import { spotsData } from "@/config/spots-data"
+import { placeholder } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
 import { Skeleton } from "@/components/ui/skeleton"
@@ -85,6 +86,7 @@ export default function HomePage() {
                       alt={spot.name}
                       width={400}
                       height={200}
+                      placeholder={placeholder({ w: 400, h: 200 })}
                     />
                   </div>
                 </CardContent>

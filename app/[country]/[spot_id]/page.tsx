@@ -8,6 +8,7 @@ import DOMPurify from "dompurify"
 import { areasData } from "@/config/areas-data"
 import { countriesData } from "@/config/countries-data"
 import { spotsData } from "@/config/spots-data"
+import { placeholder } from "@/lib/utils"
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -92,6 +93,7 @@ export default function SpotPage({
             alt={spot.name}
             width={720}
             height={405}
+            placeholder={placeholder({ w: 720, h: 405 })}
           />
         </div>
 
