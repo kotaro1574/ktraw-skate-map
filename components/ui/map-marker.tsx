@@ -57,12 +57,7 @@ export function MapMarker({ spot }: Props) {
           </Link>
 
           <div className="mt-2 overflow-hidden rounded-lg">
-            <Image
-              src={spot.image || ""}
-              alt={spot.name}
-              width={300}
-              height={200}
-            />
+            <YouTubeEmbed videoid={spot.youTubeIds[0]} />
           </div>
 
           <div className="mt-2">
