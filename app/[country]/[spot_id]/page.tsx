@@ -102,7 +102,8 @@ export default function SpotPage({
           <GoogleMapsLink lat={spot.center.lat} lng={spot.center.lng} />
         </div>
 
-        {spot.description && (
+        {/* 一旦、スポットの説明は無くす */}
+        {/* {spot.description && (
           <div className="mt-12 flex items-center justify-center">
             <div className="w-full max-w-[720px] whitespace-pre-wrap">
               <div
@@ -112,7 +113,7 @@ export default function SpotPage({
               />
             </div>
           </div>
-        )}
+        )} */}
       </div>
     </section>
   )
