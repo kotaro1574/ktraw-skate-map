@@ -79,18 +79,12 @@ export default function HomePage() {
                   <br />
                   {spot.name}
                 </CardHeader>
-                <CardContent>
-                  <div className="overflow-hidden rounded-lg">
-                    <Image
-                      src={spot.image || ""}
-                      alt={spot.name}
-                      width={400}
-                      height={200}
-                      placeholder={placeholder({ w: 400, h: 200 })}
-                    />
-                  </div>
-                </CardContent>
               </Link>
+              <CardContent>
+                <div className="overflow-hidden rounded-lg">
+                  <YouTubeEmbed videoid={spot.youTubeIds[0]} />
+                </div>
+              </CardContent>
             </Card>
           ))}
         </div>

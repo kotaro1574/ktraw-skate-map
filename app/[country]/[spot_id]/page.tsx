@@ -87,15 +87,16 @@ export default function SpotPage({
           {spot.name}
         </h2>
 
-        <div className="mt-8 flex items-center justify-center">
-          <Image
-            src={spot.image || ""}
-            alt={spot.name}
-            width={720}
-            height={405}
-            placeholder={placeholder({ w: 720, h: 405 })}
-          />
-        </div>
+        {spot.youTubeIds.map((youTubeId) => (
+          <div
+            key={youTubeId}
+            className="mt-8 flex items-center justify-center"
+          >
+            <div className="size-full max-w-[720px] overflow-hidden rounded-lg">
+              <YouTubeEmbed videoid={youTubeId} />
+            </div>
+          </div>
+        ))}
 
         <div className="mx-auto max-w-[720px]">
           <GoogleMapsLink lat={spot.center.lat} lng={spot.center.lng} />
@@ -109,23 +110,9 @@ export default function SpotPage({
                   __html: DOMPurify.sanitize(spot.description ?? ""),
                 }}
               />
-              <p>
-                スポットの映像をYoutubeにアップロードしているので参考にしてみてください。
-              </p>
             </div>
           </div>
         )}
-
-        {spot.youTubeIds.map((youTubeId) => (
-          <div
-            key={youTubeId}
-            className="mt-8 flex items-center justify-center"
-          >
-            <div className="size-full max-w-[720px] overflow-hidden rounded-lg">
-              <YouTubeEmbed videoid={youTubeId} />
-            </div>
-          </div>
-        ))}
       </div>
     </section>
   )
