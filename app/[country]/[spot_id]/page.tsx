@@ -95,8 +95,12 @@ export default function SpotPage({
           </div>
         ))}
 
-        <div className="mx-auto max-w-[720px]">
-          <GoogleMapsLink lat={spot.center.lat} lng={spot.center.lng} />
+        <div className="mx-auto mt-4 max-w-[720px]">
+          <GoogleMapsLink
+            lat={spot.center.lat}
+            lng={spot.center.lng}
+            variant="button"
+          />
         </div>
 
         {/* 一旦、スポットの説明は無くす */}
