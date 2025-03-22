@@ -1,14 +1,11 @@
 "use client"
 
 import dynamic from "next/dynamic"
-import Image from "next/image"
 import { YouTubeEmbed } from "@next/third-parties/google"
-import DOMPurify from "dompurify"
 
 import { areasData } from "@/config/areas-data"
 import { countriesData } from "@/config/countries-data"
 import { spotsData } from "@/config/spots-data"
-import { placeholder } from "@/lib/utils"
 import {
   Breadcrumb,
   BreadcrumbItem,

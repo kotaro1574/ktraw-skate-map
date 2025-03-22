@@ -2,14 +2,12 @@
 
 import { useMemo, useState } from "react"
 import dynamic from "next/dynamic"
-import Image from "next/image"
 import Link from "next/link"
 import { YouTubeEmbed } from "@next/third-parties/google"
 
 import { Area, areasData } from "@/config/areas-data"
 import { countriesData } from "@/config/countries-data"
 import { spotsData } from "@/config/spots-data"
-import { placeholder } from "@/lib/utils"
 import {
   Breadcrumb,
   BreadcrumbItem,
