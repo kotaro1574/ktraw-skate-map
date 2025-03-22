@@ -20,11 +20,16 @@ export const countriesData: Country[] = [
       lng: -123.1207,
     },
   },
-  // {
-  //   id: 2,
-  //   name: "アメリカ🇺🇸",
-  //   nameEn: "america",
-  // },
+  {
+    id: 2,
+    name: "アメリカ🇺🇸",
+    nameEn: "america",
+    zoom: 6,
+    center: {
+      lat: 46.33309465414988,
+      lng: -122.11053155984496,
+    },
+  },
   {
     id: 3,
     name: "日本🇯🇵",

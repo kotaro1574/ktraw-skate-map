@@ -1,14 +1,11 @@
 "use client"
 
 import dynamic from "next/dynamic"
-import Image from "next/image"
 import { YouTubeEmbed } from "@next/third-parties/google"
-import DOMPurify from "dompurify"
 
 import { areasData } from "@/config/areas-data"
 import { countriesData } from "@/config/countries-data"
 import { spotsData } from "@/config/spots-data"
-import { placeholder } from "@/lib/utils"
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -87,35 +84,6 @@ export default function SpotPage({
           {spot.name}
         </h2>
 
-        <div className="mt-8 flex items-center justify-center">
-          <Image
-            src={spot.image || ""}
-            alt={spot.name}
-            width={720}
-            height={405}
-            placeholder={placeholder({ w: 720, h: 405 })}
-          />
-        </div>
-
-        <div className="mx-auto max-w-[720px]">
-          <GoogleMapsLink lat={spot.center.lat} lng={spot.center.lng} />
-        </div>
-
-        {spot.description && (
-          <div className="mt-12 flex items-center justify-center">
-            <div className="w-full max-w-[720px] whitespace-pre-wrap">
-              <div
-                dangerouslySetInnerHTML={{
-                  __html: DOMPurify.sanitize(spot.description ?? ""),
-                }}
-              />
-              <p>
-                スポットの映像をYoutubeにアップロードしているので参考にしてみてください。
-              </p>
-            </div>
-          </div>
-        )}
-
         {spot.youTubeIds.map((youTubeId) => (
           <div
             key={youTubeId}
@@ -126,6 +94,23 @@ export default function SpotPage({
             </div>
           </div>
         ))}
+
+        <div className="mx-auto max-w-[720px]">
+          <GoogleMapsLink lat={spot.center.lat} lng={spot.center.lng} />
+        </div>
+
+        {/* 一旦、スポットの説明は無くす */}
+        {/* {spot.description && (
+          <div className="mt-12 flex items-center justify-center">
+            <div className="w-full max-w-[720px] whitespace-pre-wrap">
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: DOMPurify.sanitize(spot.description ?? ""),
+                }}
+              />
+            </div>
+          </div>
+        )} */}
       </div>
     </section>
   )
