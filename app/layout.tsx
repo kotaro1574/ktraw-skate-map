@@ -40,7 +40,6 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <html lang="ja" suppressHydrationWarning>
         <head>
           <GoogleAdsense pId={pId} />
-          <link rel="manifest" href="/manifest.json" />
         </head>
         <body
           className={cn(
