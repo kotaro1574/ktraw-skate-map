@@ -93,7 +93,7 @@ export default function AreaPage({ params }: { params: { country: string } }) {
             <Button
               key={`select-area-${area.name}`}
               variant={"outline"}
-              className="mr-2 rounded-sm"
+              className="mr-2 mt-2 rounded-sm"
               onClick={() => {
                 setSelectedArea(area)
               }}

@@ -24,10 +24,10 @@ export const countriesData: Country[] = [
     id: 2,
     name: "アメリカ🇺🇸",
     nameEn: "america",
-    zoom: 6,
+    zoom: 4,
     center: {
-      lat: 46.33309465414988,
-      lng: -122.11053155984496,
+      lat: 41.38213031713418,
+      lng: -119.7842475367841,
     },
   },
   {

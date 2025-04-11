@@ -99,4 +99,15 @@ export const areasData: Area[] = [
       lng: 134.5547,
     },
   },
+  {
+    id: 9,
+    name: "ロサンゼルス",
+    nameEn: "los angeles",
+    zoom: 11,
+    countryId: 2,
+    center: {
+      lat: 34.0522,
+      lng: -118.2437,
+    },
+  },
 ]
