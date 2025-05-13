@@ -13,6 +13,18 @@ export type Spot = {
 
 export const spotsData: Spot[] = [
   {
+    id: 32,
+    image: "",
+    youTubeIds: ["kf0SJOZLGyc"],
+    name: "カリフォルニア・サイエンス・センターの極上マニュアル台",
+    description: "",
+    areaId: 9,
+    center: {
+      lat: 34.01575072550863,
+      lng: -118.2861491896546,
+    },
+  },
+  {
     id: 31,
     image: "",
     youTubeIds: ["iiEiTlgAiO4"],
