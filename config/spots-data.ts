@@ -175,7 +175,7 @@ export const spotsData: Spot[] = [
   {
     id: 25,
     image: "/spot/25.jpg",
-    youTubeIds: ["hEAyqLP5hoo"],
+    youTubeIds: ["hEAyqLP5hoo", "7xQRXJhlDos"],
     name: "senda park",
     description: `
     <p>こんにちは！</p>  

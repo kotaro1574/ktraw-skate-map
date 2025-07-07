@@ -30,7 +30,11 @@ export function AboutSection() {
         </p>
       </div>
       <div className="mt-12 flex flex-col items-center justify-center">
-        <h3 className="text-2xl font-bold">Red Eyes - ktraw1574</h3>
+        <h3 className="text-2xl font-bold">&quot;SENDA&quot;</h3>
+        <div className="mt-4 size-full max-w-[720px] overflow-hidden rounded-lg">
+          <YouTubeEmbed videoid="7xQRXJhlDos" />
+        </div>
+        <h3 className="mt-12 text-2xl font-bold">Red Eyes - ktraw1574</h3>
         <div className="mt-4 size-full max-w-[720px] overflow-hidden rounded-lg">
           <YouTubeEmbed videoid="k4RFgn9Or9Y" />
         </div>
