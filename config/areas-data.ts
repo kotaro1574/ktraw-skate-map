@@ -132,4 +132,15 @@ export const areasData: Area[] = [
       lng: 131.4736,
     },
   },
+  {
+    id: 12,
+    name: "兵庫",
+    nameEn: "hyogo",
+    zoom: 10,
+    countryId: 3,
+    center: {
+      lat: 34.6852,
+      lng: 135.2001,
+    },
+  },
 ]
