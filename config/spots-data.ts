@@ -13,6 +13,18 @@ export type Spot = {
 
 export const spotsData: Spot[] = [
   {
+    id: 36,
+    image: "",
+    youTubeIds: ["JWkGas1Zc2s"],
+    name: "メリケンパーク",
+    description: "",
+    areaId: 12,
+    center: {
+      lat: 34.683129156206185,
+      lng: 135.19015131550154,
+    },
+  },
+  {
     id: 35,
     image: "",
     youTubeIds: ["Q1_2BFWlWpw"],
