@@ -143,4 +143,15 @@ export const areasData: Area[] = [
       lng: 135.2001,
     },
   },
+  {
+    id: 13,
+    name: "島根",
+    nameEn: "shimane",
+    zoom: 10,
+    countryId: 3,
+    center: {
+      lat: 35.36714825136543,
+      lng: 132.7580777883671,
+    },
+  },
 ]
