@@ -11,6 +11,8 @@ import { Skeleton } from "@/components/ui/skeleton"
 import { AboutSection } from "@/components/about-section"
 import { Icons } from "@/components/icons"
 
+export const runtime = "edge"
+
 // `window` オブジェクトに依存しているため、サーバーサイドでのレンダリングを無効にする
 const Map = dynamic(() => import("@/components/ui/map"), {
   ssr: false,
