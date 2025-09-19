@@ -25,6 +25,8 @@ import {
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 
+export const runtime = "edge"
+
 const formSchema = z.object({
   name: z.string().min(1, { message: "名前を入力してください" }),
   email: z.string().email({ message: "メールアドレスが正しくありません" }),

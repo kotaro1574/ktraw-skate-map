@@ -7,6 +7,8 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb"
 
+export const runtime = "edge"
+
 export default function PrivacyPolicyPage() {
   return (
     <section className="container px-4 py-20">
