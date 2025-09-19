@@ -1,5 +1,7 @@
 import { MetadataRoute } from "next"
 
+export const runtime = "edge"
+
 export default function manifest(): MetadataRoute.Manifest {
   return {
     name: "Ktraw Skate Map",
