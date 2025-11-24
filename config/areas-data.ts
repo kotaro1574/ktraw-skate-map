@@ -154,4 +154,15 @@ export const areasData: Area[] = [
       lng: 132.7580777883671,
     },
   },
+  {
+    id: 14,
+    name: "大分",
+    nameEn: "oita",
+    zoom: 10,
+    countryId: 3,
+    center: {
+      lat: 33.2381,
+      lng: 131.6124,
+    },
+  },
 ]

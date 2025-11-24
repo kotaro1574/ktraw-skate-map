@@ -13,6 +13,18 @@ export type Spot = {
 
 export const spotsData: Spot[] = [
   {
+    id: 38,
+    image: "",
+    youTubeIds: ["eWzEgGcZsXU"],
+    name: "大分駅周辺の極上縁石スポット",
+    description: "",
+    areaId: 14,
+    center: {
+      lat: 33.239360015051716,
+      lng: 131.60703229891644,
+    },
+  },
+  {
     id: 37,
     image: "",
     youTubeIds: ["89CWe5oeYLA"],
