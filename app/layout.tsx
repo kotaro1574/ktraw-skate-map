@@ -7,7 +7,6 @@ import { siteConfig } from "@/config/site"
 import { fontSans } from "@/lib/fonts"
 import { cn } from "@/lib/utils"
 import { Footer } from "@/components/footer"
-import GoogleAdsense from "@/components/google-adsense"
 import { SiteHeader } from "@/components/site-header"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
 import { ThemeProvider } from "@/components/theme-provider"
@@ -45,7 +44,13 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <>
       <html lang="ja" suppressHydrationWarning>
         <head>
-          <GoogleAdsense pId={pId} />
+          {pId && (
+            <script
+              async
+              src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-${pId}`}
+              crossOrigin="anonymous"
+            />
+          )}
         </head>
         <body
           className={cn(
