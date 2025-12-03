@@ -2,6 +2,10 @@
 
 import { useState } from "react"
 import { zodResolver } from "@hookform/resolvers/zod"
+import {
+  GoogleReCaptchaProvider,
+  useGoogleReCaptcha,
+} from "react-google-recaptcha-v3"
 import { useForm } from "react-hook-form"
 import { z } from "zod"
 
@@ -33,8 +37,10 @@ const formSchema = z.object({
   message: z.string().min(1, { message: "メッセージを入力してください" }),
 })
 
-export default function ContactPage() {
+function ContactForm() {
   const [loading, setLoading] = useState(false)
+  const { executeRecaptcha } = useGoogleReCaptcha()
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -48,9 +54,17 @@ export default function ContactPage() {
     try {
       setLoading(true)
 
+      if (!executeRecaptcha) {
+        console.error("reCAPTCHA not loaded")
+        return
+      }
+
+      // reCAPTCHAトークンを取得
+      const recaptchaToken = await executeRecaptcha("contact_form")
+
       const res = await fetch("/api/email-send", {
         method: "POST",
-        body: JSON.stringify(data),
+        body: JSON.stringify({ ...data, recaptchaToken }),
         headers: {
           "Content-Type": "application/json",
         },
@@ -142,5 +156,15 @@ export default function ContactPage() {
         </form>
       </Form>
     </div>
+  )
+}
+
+export default function ContactPage() {
+  return (
+    <GoogleReCaptchaProvider
+      reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ""}
+    >
+      <ContactForm />
+    </GoogleReCaptchaProvider>
   )
 }
